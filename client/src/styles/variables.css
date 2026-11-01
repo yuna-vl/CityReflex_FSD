@@ -1,0 +1,145 @@
+/* CivicReflex – Government Portal Design System Tokens */
+:root {
+  /* Core Institutional Palette */
+  --color-primary-navy: #0B2545;
+  --color-gov-blue: #003366;
+  --color-dark-slate: #243447;
+  --color-background: #F4F6F8;
+  --color-surface: #FFFFFF;
+  --color-white: #FFFFFF;
+  
+  /* Borders & Dividers */
+  --color-border: #D7DEE7;
+  --color-border-dark: #B8C5D3;
+  --color-border-light: #E8EDF2;
+
+  /* Accent & Status Colors */
+  --color-gold: #CDA250;
+  --color-gold-hover: #B88E3E;
+  --color-gold-light: #FBF4E6;
+  --color-gold-border: #E8D1A3;
+
+  --color-alert-red: #B30000;
+  --color-alert-hover: #940000;
+  --color-alert-bg: #FDF2F2;
+  --color-alert-border: #F8B4B4;
+
+  --color-success-green: #216E39;
+  --color-success-hover: #19562C;
+  --color-success-bg: #EFF8F2;
+  --color-success-border: #A3D9B1;
+
+  --color-warning-amber: #B7791F;
+  --color-warning-bg: #FEF9C3;
+  --color-warning-border: #FDE047;
+
+  --color-info-blue: #0D6EFD;
+  --color-info-bg: #EFF6FF;
+  --color-info-border: #BFDBFE;
+
+  /* Text Colors */
+  --color-text-main: #1A2533;
+  --color-text-secondary: #4A5568;
+  --color-text-muted: #64748B;
+  --color-text-light: #8E9BAE;
+  --color-text-on-dark: #FFFFFF;
+
+  /* Official Tricolor Accents */
+  --color-tricolor-saffron: #FF9933;
+  --color-tricolor-white: #FFFFFF;
+  --color-tricolor-green: #138808;
+
+  /* Typography */
+  --font-sans: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-serif: 'Noto Serif', Georgia, 'Times New Roman', serif;
+  
+  /* Font Scaling (Governed by Accessibility Controls) */
+  --font-base-size: 16px;
+  --line-height-base: 1.5;
+
+  /* Layout Spacing & Dimensions */
+  --container-max-width: 1200px;
+  --container-padding: 1.25rem;
+  
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+
+  /* Rectangular Government Portal Borders & Radii (Slightly rounded, never pill/bubbly) */
+  --border-radius-none: 0px;
+  --border-radius-xs: 2px;
+  --border-radius-sm: 3px;
+  --border-radius-md: 4px;
+
+  /* Subtle, institutional shadows */
+  --shadow-subtle: 0 1px 2px rgba(11, 37, 69, 0.06);
+  --shadow-card: 0 1px 3px rgba(11, 37, 69, 0.08), 0 1px 2px rgba(11, 37, 69, 0.04);
+  --shadow-dropdown: 0 4px 12px rgba(11, 37, 69, 0.15);
+
+  --transition-fast: 0.15s ease-in-out;
+  --transition-normal: 0.25s ease-in-out;
+}
+
+/* Accessibility: Font Size Variants */
+html[data-font-size="small"] {
+  --font-base-size: 14px;
+}
+
+html[data-font-size="normal"] {
+  --font-base-size: 16px;
+}
+
+html[data-font-size="large"] {
+  --font-base-size: 18px;
+}
+
+/* Accessibility: High Contrast Mode (Standard Indian Government Website Accessibility Specification) */
+html.high-contrast {
+  --color-primary-navy: #000000;
+  --color-gov-blue: #000000;
+  --color-dark-slate: #111111;
+  --color-background: #000000;
+  --color-surface: #000000;
+  --color-white: #FFFFFF;
+
+  --color-border: #FFFF00;
+  --color-border-dark: #FFFF00;
+  --color-border-light: #FFFF00;
+
+  --color-gold: #FFFF00;
+  --color-gold-hover: #E6E600;
+  --color-gold-light: #222200;
+  --color-gold-border: #FFFF00;
+
+  --color-alert-red: #FF3333;
+  --color-alert-hover: #FF5555;
+  --color-alert-bg: #220000;
+  --color-alert-border: #FF3333;
+
+  --color-success-green: #00FF66;
+  --color-success-hover: #33FF88;
+  --color-success-bg: #002200;
+  --color-success-border: #00FF66;
+
+  --color-warning-amber: #FFFF00;
+  --color-warning-bg: #222200;
+  --color-warning-border: #FFFF00;
+
+  --color-info-blue: #00FFFF;
+  --color-info-bg: #001A26;
+  --color-info-border: #00FFFF;
+
+  --color-text-main: #FFFFFF;
+  --color-text-secondary: #FFFF00;
+  --color-text-muted: #00FFFF;
+  --color-text-light: #FFFFFF;
+  --color-text-on-dark: #FFFF00;
+
+  --shadow-subtle: none;
+  --shadow-card: 0 0 0 1px #FFFF00;
+  --shadow-dropdown: 0 0 0 2px #FFFF00;
+}
+

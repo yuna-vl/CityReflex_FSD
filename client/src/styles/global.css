@@ -1,0 +1,248 @@
+@import './variables.css';
+
+/* Universal CSS Reset for Government Application */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-base-size);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: var(--line-height-base);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Skip Link for Screen Readers (GIGW / WCAG 2.1 AA Compliant) */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 10px;
+  background: var(--color-primary-navy);
+  color: #FFFFFF;
+  padding: 8px 16px;
+  z-index: 99999;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: 2px solid var(--color-gold);
+  border-radius: var(--border-radius-xs);
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 10px;
+  outline: 3px solid var(--color-gold);
+}
+
+/* Indian Tricolor Accent Strip */
+.tricolor-strip {
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(
+    to right,
+    var(--color-tricolor-saffron) 0%,
+    var(--color-tricolor-saffron) 33.33%,
+    #E2E8F0 33.33%,
+    #E2E8F0 66.66%,
+    var(--color-tricolor-green) 66.66%,
+    var(--color-tricolor-green) 100%
+  );
+}
+
+/* Centered 1200px Layout Container */
+.portal-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Portal Typography */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary-navy);
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--color-primary-navy);
+  border-bottom: 2px solid var(--color-border);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.section-heading::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 80px;
+  height: 2px;
+  background-color: var(--color-gold);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--color-gov-blue);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--color-primary-navy);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Grid & Flex Utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+@media (max-width: 992px) {
+  .grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-4, .grid-3, .grid-2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Form Controls - Rectangular Gov Portal Style */
+.form-group {
+  margin-bottom: 1.25rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-dark-slate);
+  margin-bottom: 0.375rem;
+}
+
+.form-label .required {
+  color: var(--color-alert-red);
+  margin-left: 2px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.9375rem;
+  font-family: inherit;
+  color: var(--color-text-main);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-xs);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-control:focus {
+  border-color: var(--color-gov-blue);
+  box-shadow: 0 0 0 1px var(--color-gov-blue);
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: var(--color-text-light);
+}
+
+.form-help {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  margin-top: 0.25rem;
+}
+
+/* High Contrast Overrides */
+html.high-contrast a {
+  color: #FFFF00;
+}
+
+html.high-contrast .tricolor-strip {
+  background: #FFFF00;
+}
+
+html.high-contrast .section-heading {
+  border-bottom-color: #FFFF00;
+  color: #FFFF00;
+}
+
+html.high-contrast .section-heading::after {
+  background-color: #00FFFF;
+}
+
+html.high-contrast .form-control {
+  border-color: #FFFF00;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+

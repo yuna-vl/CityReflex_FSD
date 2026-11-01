@@ -1,0 +1,4 @@
+/* CivicReflex Root Design System */
+@import './styles/variables.css';
+@import './styles/global.css';
+@import './styles/components.css';
